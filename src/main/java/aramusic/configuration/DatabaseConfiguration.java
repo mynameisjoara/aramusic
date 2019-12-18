@@ -32,12 +32,18 @@ public class DatabaseConfiguration {
 	}
 	
 	//위의 히카리CP 설정파일을 이용하여 DB와 연결하는 데이터소스 생성
-	@Bean
-	public DataSource dataSource() throws Exception{
-		DataSource dataSource = new HikariDataSource(hikariConfig());
-		System.out.println(dataSource.toString());
-		return dataSource;
-	}
+    @Bean
+    public DataSource dataSource() throws Exception {
+        DataSource dataSource = new HikariDataSource(hikariConfig());
+        System.out.println(dataSource.toString());
+        return dataSource;
+    }
+
+    @Bean
+    @ConfigurationProperties(prefix = "mybatis.configuration")
+    public org.apache.ibatis.session.Configuration mybatisConfig() {
+        return new org.apache.ibatis.session.Configuration();
+    }
 	
 	@Bean
 	public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception{
@@ -46,12 +52,13 @@ public class DatabaseConfiguration {
 		sqlSessionFactoryBean.setMapperLocations(applicationContext.getResources("classpath:/mapper/**/sql-*.xml"));
 																				//매퍼파일 위치 설정 resource폴더 아래 mapper 폴더 아래 모든 폴더에서
 																				//sql로 시작하고 .xml로 끝나는 모든 파일
+        sqlSessionFactoryBean.setConfiguration(mybatisConfig());
 		return sqlSessionFactoryBean.getObject();
 	}
 	
-	@Bean
-	public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory){
-		return new SqlSessionTemplate(sqlSessionFactory);
-	}
+    @Bean
+    public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) {
+        return new SqlSessionTemplate(sqlSessionFactory);
+    }
 
 }
