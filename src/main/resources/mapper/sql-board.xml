@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="aramusic.aramusic.mapper.FreeboardMapper">
+<mapper namespace="aramusic.mapper.FreeboardMapper">
 
-	<select id="selectBoardList" resultType="aramusic.aramusic.dto.FreeboardDto">
+	<select id="selectBoardList" resultType="aramusic.dto.FreeboardDto">
 		<![CDATA[
 			SELECT
 				idx,
