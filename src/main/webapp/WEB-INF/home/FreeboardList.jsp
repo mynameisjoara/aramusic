@@ -29,7 +29,7 @@
 		<c:if test="${empty list }">
 			<tr>
 				<td colspan="2" align="center">
-					<h3>검색된 레코드가 없습니다.</h3>
+					<h3>검색된 레코드가 없습니다.!!!</h3>
 				</td>
 			</tr>
 		</c:if>	
