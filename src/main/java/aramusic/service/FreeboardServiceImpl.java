@@ -20,4 +20,14 @@ public class FreeboardServiceImpl implements FreeboardService {
 		return freeboardMapper.selectBoardList();
 	}
 
+	@Override
+	public FreeboardDto selectFreeBoardCont(int idx) throws Exception {
+		return freeboardMapper.selectFreeBoardCont(idx);
+	}
+
+	@Override
+	public void updateFreeBoardHit(int idx) throws Exception {
+		freeboardMapper.updateFreeBoardHit(idx);
+	}
+
 }

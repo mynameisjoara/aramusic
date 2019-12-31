@@ -3,12 +3,14 @@
 
 <mapper namespace="aramusic.mapper.FreeboardMapper">
 
+	<!-- 전체글 가져오기 -->
 	<select id="selectBoardList" resultType="aramusic.dto.FreeboardDto">
 		<![CDATA[
 			SELECT
 				idx,
 				title,
 				hit,
+				creator_id,
 				DATE_FORMAT(created_datetime, '%Y.%m.%d %H:%i:%s') AS created_datetime
 			FROM
 				freeboard
@@ -17,5 +19,35 @@
 			ORDER BY idx DESC
 		]]>
 	</select>
+	
+	<!-- 글 1개 가져오기 -->
+	<select id="selectFreeBoardCont" resultType="aramusic.dto.FreeboardDto" parameterType="int">
+		<![CDATA[
+			SELECT
+				idx,
+				title,
+				contents,
+				hit,
+				creator_id,
+				DATE_FORMAT(created_datetime, '%Y.%m.%d %H:%i:%s') AS created_datetime
+			FROM
+				freeboard
+			WHERE
+				idx = #{idx}
+		]]>
+	</select>
+	
+	<!-- 글 클릭시 조회수 증가시키기 -->
+	<update id="updateFreeBoardHit" parameterType="int">
+		<![CDATA[
+			UPDATE
+				freeboard
+			SET
+				hit = hit + 1
+			WHERE
+				idx = #{idx}
+		]]>
+	</update>
+	
 	
 	</mapper>
