@@ -48,6 +48,23 @@
 				idx = #{idx}
 		]]>
 	</update>
-	
+
+	<!-- 글쓰기 : 내용 DB에 저장시키기 -->
+	<insert id="insertBoard" parameterType="aramusic.dto.FreeboardDto">
+		<![CDATA[
+			INSERT INTO
+				freeboard
+			(
+				title, contents, creator_id, created_datetime
+			)
+			VALUES
+			(
+				#{title},
+				#{contents},
+				'admin',
+				NOW()
+			)
+		]]>
+	</insert>	
 	
 	</mapper>

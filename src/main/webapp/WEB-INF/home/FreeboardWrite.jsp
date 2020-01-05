@@ -19,7 +19,7 @@
 	    		</tr>
 	    		<tr>
 	    			<td colspan="2">
-	    			<textarea rows="8" cols="30" name="cont" style="resize: none"  required="required"></textarea> </td>
+	    			<textarea rows="8" cols="30" id="contents" name="contents" style="resize: none"  required="required"></textarea> </td>
 	    		</tr>
 	    	</table>
 	    	<input type="submit" id="submit" value="작성하기" class="btn">

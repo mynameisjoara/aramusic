@@ -57,11 +57,10 @@ public class BoardController {
 		return mv;
 		}	
 	
-	/* 미완성 */
 	@RequestMapping("/FreeboardWriteOk")	//게시판 글작성 완료
-	public String FreeboardWriteOk() throws Exception{
+	public String FreeboardWriteOk(FreeboardDto dto) throws Exception{
 		//작성내용 db저장 로직 구현하기 
-		
+		freeboardService.insertBoard(dto);
         return "redirect:/FreeboardList";
 		}		
 	

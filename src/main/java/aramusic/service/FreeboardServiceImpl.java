@@ -30,4 +30,10 @@ public class FreeboardServiceImpl implements FreeboardService {
 		freeboardMapper.updateFreeBoardHit(idx);
 	}
 
+	@Override
+	public void insertBoard(FreeboardDto dto) throws Exception {
+		freeboardMapper.insertBoard(dto);
+		
+	}
+
 }
