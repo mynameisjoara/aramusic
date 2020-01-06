@@ -220,7 +220,11 @@
 
           <ul id="og-grid" class="og-grid">
             <li>
-              <a href="https://www.naver.com" data-largesrc="../resources/img/works/1.jpg" data-title="공연장1" data-description="설명1.">
+              <a href="https://clubff.modoo.at/" data-largesrc="../resources/img/works/1.jpg" data-title="CLUB FF" 
+              data-description="<p><b>INDIE ROCK N ROLL LIVE & DJ PARTY CLUB</b></p>
+              					WEB : https://clubff.modoo.at/ <br>
+              					INSTAGRAM : @hongdaeff <br>
+             					LOCATION : 서울특별시 마포구 서교동 407-8 지하1층">
                 <img src="../resources/img/works/thumbs/1.jpg" alt="" />
               </a>
             </li>
