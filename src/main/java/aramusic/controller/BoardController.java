@@ -79,7 +79,7 @@ public class BoardController {
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		if(dto.getWritepwd().equals(dto.getCheckpwd())) { //비밀번호 체크
-			freeboardService.updateBoard(dto);//수정된 글 저장	로직 짜기 미완성
+			freeboardService.updateBoard(dto);//수정된 글 저장
 			
             out.println("<script>");
             out.println("alert('수정이 완료되었습니다.')");
@@ -92,5 +92,35 @@ public class BoardController {
             out.println("</script>");
 		}
 		}	
+	
+	@RequestMapping("/FreeboardDelete")	//글삭제 비밀번호 입력받는 jsp페이지 입성
+	public ModelAndView FreeboardDelete(@RequestParam("idx") int idx) throws Exception{
+		ModelAndView mv = new ModelAndView("/FreeboardDelete");
+        FreeboardDto dto = freeboardService.selectFreeBoardCont(idx);	//비밀번호 비교위해 dto 가져오기
+		mv.addObject("dto", dto);
+		return mv;
+		}
+	
+	@RequestMapping("/FreeboardDeleteOk")	//게시판 글삭제 완료
+	public void FreeboardDeleteOk(FreeboardDto dto, HttpServletResponse response) throws Exception{
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		if(dto.getWritepwd().equals(dto.getCheckpwd())) { //비밀번호 체크
+			freeboardService.deleteBoard(dto);//글 삭제
+			
+            out.println("<script>");
+            out.println("alert('삭제가 완료되었습니다.')");
+	        out.println("location.href='FreeboardList'");
+            out.println("</script>");			
+		}else {
+            out.println("<script>");
+            out.println("alert('비밀번호가 틀립니다.')");
+            out.println("history.back()");
+            out.println("</script>");
+		}
+		}	
+	
+	
+	
 	
 }

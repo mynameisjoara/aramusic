@@ -81,7 +81,19 @@
 				idx = #{idx}
 		]]>
 	</update>	
-	
+
+	<!-- 글 삭제 : yn여부를 y로 변경 -->
+	<update id="deleteBoard" parameterType="aramusic.dto.FreeboardDto">
+		<![CDATA[
+			UPDATE
+				freeboard
+			SET
+				deleted_yn = 'Y'
+			WHERE
+				idx = #{idx}
+		]]>
+	</update>	
+		
 	
 	
 	</mapper>

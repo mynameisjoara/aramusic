@@ -49,7 +49,7 @@
 			<div align="center">
 				<td align="center">
                 <input type="button" value="수정" class="btn" onclick="location.href='/FreeboardEdit?idx=${dto.getIdx()}'">
-                <!-- 미완성 -->    <input type="button" value="삭제" class="btn" onclick="location.href='/FreeboardDelete?idx=${dto.getIdx()}'">
+                <input type="button" value="삭제" class="btn" onclick="location.href='/FreeboardDelete?idx=${dto.getIdx()}'">
 					<input type="button" value="전체목록" class="btn" onclick="location.href='/FreeboardList'">
 				</td>
 			</div>

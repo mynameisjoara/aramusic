@@ -39,6 +39,12 @@ public class FreeboardServiceImpl implements FreeboardService {
 	public void updateBoard(FreeboardDto dto) throws Exception {
 		freeboardMapper.updateBoard(dto);
 	}
+
+	@Override
+	public void deleteBoard(FreeboardDto dto) throws Exception {
+		freeboardMapper.deleteBoard(dto);
+		
+	}
 	
 
 }

@@ -16,6 +16,7 @@ public interface FreeboardMapper {
 	void updateFreeBoardHit(@Param("idx") int idx) throws Exception;
 	void insertBoard(FreeboardDto dto) throws Exception;
 	void updateBoard(FreeboardDto dto) throws Exception;
+	void deleteBoard(FreeboardDto dto) throws Exception;
 }
 
 

@@ -12,5 +12,6 @@ public interface FreeboardService {
 	void updateFreeBoardHit(int idx) throws Exception;	//글번호에 해당하는 조회수 +1 증가
 	void insertBoard(FreeboardDto dto) throws Exception;	//글쓰기 : 글작성내용 DB에 저장시키기
 	void updateBoard(FreeboardDto dto) throws Exception;	//글수정 : 수정된내용으로 DB update 시키기
+	void deleteBoard(FreeboardDto dto) throws Exception;	//글삭제 : deleted_yn을 y로 변경하는 update
 	
 }
