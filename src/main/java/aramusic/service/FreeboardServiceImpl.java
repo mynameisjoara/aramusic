@@ -33,7 +33,12 @@ public class FreeboardServiceImpl implements FreeboardService {
 	@Override
 	public void insertBoard(FreeboardDto dto) throws Exception {
 		freeboardMapper.insertBoard(dto);
-		
 	}
+
+	@Override
+	public void updateBoard(FreeboardDto dto) throws Exception {
+		freeboardMapper.updateBoard(dto);
+	}
+	
 
 }

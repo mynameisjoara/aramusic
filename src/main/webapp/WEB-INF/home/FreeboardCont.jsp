@@ -22,7 +22,7 @@
 					<th>조회수</th>
 					<td><c:out value="${dto.getHit()}"/></td>	
 					<th>작성자</th>
-					<td><c:out value="${dto.getCreatorId() }"/></td>						
+					<td><c:out value="${dto.getCreator() }"/></td>						
 				</tr>
 				<tr>			
 					<th>제목</th>
@@ -48,9 +48,9 @@
 			<br>
 			<div align="center">
 				<td align="center">
-                <!-- 미완성 -->    <input type="button" value="수정" onclick="location.href='/freeEditForm?idx=${dto.getIdx()}'">
-                <!-- 미완성 -->    <input type="button" value="삭제" onclick="location.href='/freeDeleteForm?idx=${dto.getIdx()}'">
-					<input type="button" value="전체목록" onclick="location.href='/FreeboardList'">
+                <input type="button" value="수정" class="btn" onclick="location.href='/FreeboardEdit?idx=${dto.getIdx()}'">
+                <!-- 미완성 -->    <input type="button" value="삭제" class="btn" onclick="location.href='/FreeboardDelete?idx=${dto.getIdx()}'">
+					<input type="button" value="전체목록" class="btn" onclick="location.href='/FreeboardList'">
 				</td>
 			</div>
 		</div>

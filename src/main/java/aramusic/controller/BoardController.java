@@ -1,7 +1,10 @@
 package aramusic.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -59,9 +62,35 @@ public class BoardController {
 	
 	@RequestMapping("/FreeboardWriteOk")	//게시판 글작성 완료
 	public String FreeboardWriteOk(FreeboardDto dto) throws Exception{
-		//작성내용 db저장 로직 구현하기 
 		freeboardService.insertBoard(dto);
         return "redirect:/FreeboardList";
 		}		
+	
+	@RequestMapping("/FreeboardEdit")	//게시판 글수정 폼 입성
+	public ModelAndView FreeboardEdit(@RequestParam("idx") int idx) throws Exception{
+		ModelAndView mv = new ModelAndView("/FreeboardEdit");
+        FreeboardDto dto = freeboardService.selectFreeBoardCont(idx);	//원래내용 가져와서 띄우기
+		mv.addObject("dto", dto);
+		return mv;
+		}	
+	
+	@RequestMapping("/FreeboardEditOk")	//게시판 글수정 완료
+	public void FreeboardEditOk(FreeboardDto dto, HttpServletResponse response) throws Exception{
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		if(dto.getWritepwd().equals(dto.getCheckpwd())) { //비밀번호 체크
+			freeboardService.updateBoard(dto);//수정된 글 저장	로직 짜기 미완성
+			
+            out.println("<script>");
+            out.println("alert('수정이 완료되었습니다.')");
+	        out.println("location.href='FreeboardCont?idx="+dto.getIdx()+"'");
+            out.println("</script>");			
+		}else {
+            out.println("<script>");
+            out.println("alert('비밀번호가 틀립니다.')");
+            out.println("history.back()");
+            out.println("</script>");
+		}
+		}	
 	
 }

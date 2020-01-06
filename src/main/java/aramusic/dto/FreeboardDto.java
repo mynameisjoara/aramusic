@@ -10,9 +10,10 @@ public class FreeboardDto {
 	private String contents;
 	private int hit;
 	private String createdDatetime;
-	private String creatorId;
+	private String creator;
 	private String updatedDatetime;
 	private String deletedYn;
-	
+	private String writepwd;
+	private String checkpwd;
 	
 }

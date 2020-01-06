@@ -25,7 +25,7 @@
                     <td><c:out value="${dto.getIdx()}"/></td>			
 					<td><a href="/FreeboardCont?idx=${dto.getIdx()}"> <c:out value="${dto.getTitle()}"/></a></td>	
                     <td><c:out value="${dto.getHit()}"/></td>			
-                    <td><c:out value="${dto.getCreatorId()}"/></td>			
+                    <td><c:out value="${dto.getCreator()}"/></td>			
                     <td><c:out value="${dto.getCreatedDatetime()}"/></td>			
 				</tr>
 			</c:forEach>

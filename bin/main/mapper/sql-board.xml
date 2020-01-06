@@ -10,7 +10,7 @@
 				idx,
 				title,
 				hit,
-				creator_id,
+				creator,
 				DATE_FORMAT(created_datetime, '%Y.%m.%d %H:%i:%s') AS created_datetime
 			FROM
 				freeboard
@@ -27,8 +27,9 @@
 				idx,
 				title,
 				contents,
+				writepwd,
 				hit,
-				creator_id,
+				creator,
 				DATE_FORMAT(created_datetime, '%Y.%m.%d %H:%i:%s') AS created_datetime
 			FROM
 				freeboard
@@ -55,16 +56,32 @@
 			INSERT INTO
 				freeboard
 			(
-				title, contents, creator_id, created_datetime
+				title, contents, creator, created_datetime, writepwd
 			)
 			VALUES
 			(
 				#{title},
 				#{contents},
-				'admin',
-				NOW()
+				#{creator},
+				NOW(),
+				#{writepwd}
 			)
 		]]>
 	</insert>	
+	
+	<!-- 글 수정 : 수정된 내용 update -->
+	<update id="updateBoard" parameterType="aramusic.dto.FreeboardDto">
+		<![CDATA[
+			UPDATE
+				freeboard
+			SET
+				title = #{title},
+				contents = #{contents}
+			WHERE
+				idx = #{idx}
+		]]>
+	</update>	
+	
+	
 	
 	</mapper>
