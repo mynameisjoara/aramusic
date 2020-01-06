@@ -10,11 +10,44 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   
+  <!-- css -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,800" rel="stylesheet" media="screen">
+
+  <link href="../resources/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="../resources/css/style.css" rel="stylesheet" media="screen">
+  <link href="../resources/color/default.css" rel="stylesheet" media="screen">
+  
 </head>
 
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle nav</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
+        <!-- Logo text or image -->
+        <a class="navbar-brand" href="/main">ARAMUSIC</a>
+
+      </div>
+      <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="current"><a href="#intro">소개</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Service</a></li>
+          <li><a href="#portfolio">공연장</a></li>
+          <li><a href="/FreeboardList">게시판</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+       
   <!-- intro area -->
   <section id="intro">
     <div class="intro-container">
@@ -187,62 +220,62 @@
 
           <ul id="og-grid" class="og-grid">
             <li>
-              <a href="https://www.naver.com" data-largesrc="img/works/1.jpg" data-title="공연장1" data-description="설명1.">
+              <a href="https://www.naver.com" data-largesrc="../resources/img/works/1.jpg" data-title="공연장1" data-description="설명1.">
                 <img src="../resources/img/works/thumbs/1.jpg" alt="" />
               </a>
             </li>
             <li>
-              <a href="https://bootstrapmade.com" data-largesrc="img/works/2.jpg" data-title="Portfolio title" data-description="Mea an eros periculis dignissim, quo mollis nostrum elaboraret et. Id quem perfecto mel, no etiam perfecto qui. No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
+              <a href="https://bootstrapmade.com" data-largesrc="../resources/img/works/2.jpg" data-title="Portfolio title" data-description="Mea an eros periculis dignissim, quo mollis nostrum elaboraret et. Id quem perfecto mel, no etiam perfecto qui. No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
                 <img src="../resources/img/works/thumbs/2.jpg" alt="" />
               </a>
             </li>
             <li>
-              <a href="https://bootstrapmade.com" data-largesrc="img/works/3.jpg" data-title="Portfolio title" data-description="Vim ad persecuti appellantur. Eam ignota deterruisset eu, in omnis fierent convenire sed. Ne nulla veritus vel, liber euripidis in eos. Postea comprehensam vis in, detracto deseruisse mei ea. Ex sadipscing deterruisset concludaturque quo.">
+              <a href="https://bootstrapmade.com" data-largesrc="../resources/img/works/3.jpg" data-title="Portfolio title" data-description="Vim ad persecuti appellantur. Eam ignota deterruisset eu, in omnis fierent convenire sed. Ne nulla veritus vel, liber euripidis in eos. Postea comprehensam vis in, detracto deseruisse mei ea. Ex sadipscing deterruisset concludaturque quo.">
                 <img src="../resources/img/works/thumbs/3.jpg" alt="img01" />
               </a>
             </li>
             <li>
-              <a href="https://bootstrapmade.com" data-largesrc="img/works/4.jpg" data-title="Portfolio title" data-description="In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim, an movet interesset necessitatibus mea.">
+              <a href="https://bootstrapmade.com" data-largesrc="../resources/img/works/4.jpg" data-title="Portfolio title" data-description="In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim, an movet interesset necessitatibus mea.">
                 <img src="../resources/img/works/thumbs/4.jpg" alt="img01" />
               </a>
             </li>
             <li>
-              <a href="https://bootstrapmade.com" data-largesrc="img/works/5.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea">
+              <a href="https://bootstrapmade.com" data-largesrc="../resources/img/works/5.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea">
                 <img src="../resources/img/works/thumbs/5.jpg" alt="img01" />
               </a>
             </li>
             <li>
-              <a href="https://bootstrapmade.com" data-largesrc="img/works/6.jpg" data-title="Portfolio title" data-description="Id elit saepe pro. In atomorum constituam definitionem quo, at torquatos sadipscing eum, ut eum wisi meis mentitum. Probo feugiat ea duo. An usu platonem instructior, qui dolores inciderint ad. Te elit essent mea, vim ne atqui legimus invenire, ad dolor vitae sea.">
+              <a href="https://bootstrapmade.com" data-largesrc="../resources/img/works/6.jpg" data-title="Portfolio title" data-description="Id elit saepe pro. In atomorum constituam definitionem quo, at torquatos sadipscing eum, ut eum wisi meis mentitum. Probo feugiat ea duo. An usu platonem instructior, qui dolores inciderint ad. Te elit essent mea, vim ne atqui legimus invenire, ad dolor vitae sea.">
                 <img src="../resources/img/works/thumbs/6.jpg" alt="img01" />
               </a>
             </li>
             <li>
-              <a href="https://bootstrapmade.com" data-largesrc="img/works/7.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei.">
+              <a href="https://bootstrapmade.com" data-largesrc="../resources/img/works/7.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei.">
                 <img src="../resources/img/works/thumbs/7.jpg" alt="img01" />
               </a>
             </li>
             <li>
-              <a href="https://bootstrapmade.com" data-largesrc="img/works/8.jpg" data-title="Portfolio title" data-description="No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
+              <a href="https://bootstrapmade.com" data-largesrc="../resources/img/works/8.jpg" data-title="Portfolio title" data-description="No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
                 <img src="../resources/img/works/thumbs/8.jpg" alt="img01" />
               </a>
             </li>
             <li>
-              <a href="https://bootstrapmade.com" data-largesrc="img/works/9.jpg" data-title="Portfolio title" data-description="Lorem ipsum dolor sit amet, ex pri quod ferri fastidii. Mazim philosophia eum ad, facilisis laboramus te est. Eam magna fabellas ut. Ne vis diceret accumsan salutandi, pro in impedit accusamus dissentias, ut nonumy eloquentiam ius.">
+              <a href="https://bootstrapmade.com" data-largesrc="../resources/img/works/9.jpg" data-title="Portfolio title" data-description="Lorem ipsum dolor sit amet, ex pri quod ferri fastidii. Mazim philosophia eum ad, facilisis laboramus te est. Eam magna fabellas ut. Ne vis diceret accumsan salutandi, pro in impedit accusamus dissentias, ut nonumy eloquentiam ius.">
                 <img src="../resources/img/works/thumbs/9.jpg" alt="img01" />
               </a>
             </li>
             <li>
-              <a href="https://bootstrapmade.com" data-largesrc="img/works/10.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim.">
+              <a href="https://bootstrapmade.com" data-largesrc="../resources/img/works/10.jpg" data-title="Portfolio title" data-description="Duo te dico volutpat, unum elit oblique per id. Ne duo mollis sapientem intellegebat. Per at augue vidisse percipit, pri vocibus assueverit interesset ut, no dolore luptatum incorrupte nec. In mentitum forensibus nec, nibh eripuit ut pri, tale illud voluptatum ut sea. Sed oratio repudiare ei, cum an magna labitur, eu atqui augue mei. Pri consul detracto eu, solet nusquam accusam ex vim.">
                 <img src="../resources/img/works/thumbs/10.jpg" alt="img01" />
               </a>
             </li>
             <li>
-              <a href="https://bootstrapmade.com" data-largesrc="img/works/11.jpg" data-title="Portfolio title" data-description="Vim ad persecuti appellantur. Eam ignota deterruisset eu, in omnis fierent convenire sed. Ne nulla veritus vel, liber euripidis in eos. Postea comprehensam vis in, detracto deseruisse mei ea. Ex sadipscing deterruisset concludaturque quo.">
+              <a href="https://bootstrapmade.com" data-largesrc="../resources/img/works/11.jpg" data-title="Portfolio title" data-description="Vim ad persecuti appellantur. Eam ignota deterruisset eu, in omnis fierent convenire sed. Ne nulla veritus vel, liber euripidis in eos. Postea comprehensam vis in, detracto deseruisse mei ea. Ex sadipscing deterruisset concludaturque quo.">
                 <img src="../resources/img/works/thumbs/11.jpg" alt="img01" />
               </a>
             </li>
             <li>
-              <a href="https://bootstrapmade.com" data-largesrc="img/works/12.jpg" data-title="Portfolio title" data-description="Mea an eros periculis dignissim, quo mollis nostrum elaboraret et. Id quem perfecto mel, no etiam perfecto qui. No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
+              <a href="https://bootstrapmade.com" data-largesrc="../resources/img/works/12.jpg" data-title="Portfolio title" data-description="Mea an eros periculis dignissim, quo mollis nostrum elaboraret et. Id quem perfecto mel, no etiam perfecto qui. No nisl legere recusabo nam, ius an tale pericula evertitur, dicat phaedrum qui in. Usu numquam legendos in, voluptaria sadipscing ut vel. Eu eum mandamus volutpat gubergren, eos ad detracto nominati, ne eum idque elitr aliquam.">
                 <img src="../resources/img/works/thumbs/12.jpg" alt="img01" />
               </a>
             </li>
@@ -369,6 +402,20 @@
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
+  <!-- js -->
+  <script src="../resources/js/jquery.js"></script>
+  <script src="../resources/js/bootstrap.min.js"></script>
+  <script src="../resources/js/wow.min.js"></script>
+  <script src="../resources/js/jquery.scrollTo.min.js"></script>
+  <script src="../resources/js/jquery.nav.js"></script>
+  <script src="../resources/js/modernizr.custom.js"></script>
+  <script src="../resources/js/grid.js"></script>
+  <script src="../resources/js/stellar.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="../resources/contactform/contactform.js"></script>
+
+  <!-- Template Custom Javascript File -->
+  <script src="../resources/js/custom.js"></script>
 
 </body>
 
